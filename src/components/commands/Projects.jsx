@@ -58,8 +58,44 @@ const projects = [
   {
     id: 2,
     title: "Simulador de Tienda",
-    desc: "Simulator of a store made in java, all by console and with static lists with user roles.",
+    desc: "Simulator of a store made in Java, all by console and with static lists with user roles.",
     url: "https://github.com/LennyMA/ProyectoMCS",
+  },
+  {
+    id: 3,
+    title: "Estructura de Datos",
+    desc: "Data structure course with Python language.",
+    url: "https://github.com/LennyMA/estructuraDDatos",
+  },
+  {
+    id: 4,
+    title: "CRUD CON PHP",
+    desc: "Basic contact CRUD using PHP, Bootstrap and environment variables with composer.",
+    url: "https://github.com/LennyMA/CRUDPHP",
+  },
+  {
+    id: 5,
+    title: "API REST",
+    desc: "Creation of a REST API using Javascript, Node js, express and MySQL.",
+    url: "https://github.com/LennyMA/restApi",
+  },
+  {
+    id: 6,
+    title: "Trabajo de aplicaciones Web",
+    desc: "Car repair business manager using angular, web application, front end only.",
+    url: "https://github.com/LennyMA/appWEBAngular",
+  },
+  {
+    id: 7,
+    title: "Gestor Consultorio Médico",
+    desc: "Front end of a web application for the management of a medical office using Angular and TypeScript.",
+    url: "https://github.com/LennyMA/proyectoAppWebFront",
+  },
+  {
+    id: 8,
+    title: "Back del Consultorio Médico",
+    desc: "Back end of the medical office.",
+    url: "https://github.com/LennyMA/proyectoAppWebBack",
   },
 ];
 

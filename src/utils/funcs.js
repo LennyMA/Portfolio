@@ -45,7 +45,7 @@ export const checkRedirect = (rerender, currentCommand, command) =>
   currentCommand[1] === "go" && // first arg is 'go'
   currentCommand.length > 1 && // current command has arg
   currentCommand.length < 4 && // if the number of arg is valid (not `projects go 1 sth`)
-  _.includes([1, 2, 3, 4], parseInt(currentCommand[2])); // arg last part is one of id
+  _.includes([1, 2, 3, 4, 5, 6, 7, 8], parseInt(currentCommand[2])); // arg last part is one of id
 
 /**
  * Check current render makes redirect for theme
