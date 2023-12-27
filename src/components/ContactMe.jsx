@@ -32,23 +32,23 @@ const ContactMe = ({ onClose, onOutsideClick }) => {
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <TitleForm>Contact Me</TitleForm>
         <form onSubmit={sendEmail}>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Name: </label>
           <input
             type="text"
             name="name"
             id="name"
-            placeholder="e.g., Obi-wan Kenobi"
+            placeholder="Type your name..."
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
           <hr />
 
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email: </label>
           <input
             type="email"
             name="email"
             id="email"
-            placeholder="e.g., ObiWan@gmail.com"
+            placeholder="Type your e-mail..."
             value={formData.email}
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
@@ -56,7 +56,6 @@ const ContactMe = ({ onClose, onOutsideClick }) => {
           />
           <hr />
 
-          <label htmlFor="message">Message</label>
           <textarea
             name="message"
             id="message"
