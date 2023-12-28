@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import emailjs from "@emailjs/browser";
-import { Modal, ModalContent, TitleForm, SendButton } from "./styles/ContactMe.styled";
+import { Modal, ModalContent, TitleForm, SendButton, Input, Textarea } from "./styles/ContactMe.styled";
 
 const ContactMe = ({ onClose, onOutsideClick }) => {
   const [formData, setFormData] = useState({
@@ -79,8 +79,7 @@ const ContactMe = ({ onClose, onOutsideClick }) => {
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <TitleForm>Contact Me</TitleForm>
         <form onSubmit={sendEmail}>
-          <label htmlFor="name">Name: </label>
-          <input
+          <Input
             type="text"
             name="name"
             id="name"
@@ -94,8 +93,7 @@ const ContactMe = ({ onClose, onOutsideClick }) => {
           <span>{formErrors.name}</span>
           <hr />
 
-          <label htmlFor="email">Email: </label>
-          <input
+          <Input
             type="email"
             name="email"
             id="email"
@@ -109,7 +107,7 @@ const ContactMe = ({ onClose, onOutsideClick }) => {
           <span>{formErrors.email}</span>
           <hr />
 
-          <textarea
+          <Textarea
             name="message"
             id="message"
             cols="30"
@@ -120,7 +118,7 @@ const ContactMe = ({ onClose, onOutsideClick }) => {
               setFormData({ ...formData, message: e.target.value });
               validateField("message", e.target.value);
             }}
-          ></textarea>
+          ></Textarea>
           <span>{formErrors.message}</span>
           <hr />
 
