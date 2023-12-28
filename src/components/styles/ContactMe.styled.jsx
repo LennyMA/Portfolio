@@ -42,3 +42,21 @@ export const SuccessMessage = styled.h2`
   font-size: 18px;
   color: green;
 `;
+
+export const SendButton = styled.button`
+  width: 100%; // O ajusta el ancho según sea necesario
+  font-size: 16px; // O ajusta el tamaño de fuente según sea necesario
+  text-align: center;
+  margin-top: 20px; // Ajusta el margen superior según sea necesario
+  background-color: ${({ isValid }) => (isValid ? "green" : "gray")};
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: ${({ isValid }) => (isValid ? "pointer" : "not-allowed")};
+
+  &:hover {
+    background-color: ${({ isValid }) => (isValid ? "darkgreen" : "gray")};
+  }
+`;
+
