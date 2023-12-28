@@ -1,7 +1,14 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import emailjs from "@emailjs/browser";
-import { Modal, ModalContent, TitleForm, SendButton, Input, Textarea } from "./styles/ContactMe.styled";
+import {
+  Modal,
+  ModalContent,
+  TitleForm,
+  SendButton,
+  Input,
+  Textarea,
+} from "./styles/ContactMe.styled";
 
 const ContactMe = ({ onClose, onOutsideClick }) => {
   const [formData, setFormData] = useState({
@@ -50,10 +57,10 @@ const ContactMe = ({ onClose, onOutsideClick }) => {
     if (Object.keys(errors).length === 0) {
       emailjs
         .sendForm(
-          "service_yxkupb8",
-          "template_nz70w0n",
+          import.meta.env.VITE_SERVICE_ID,
+          import.meta.env.VITE_TEMPLATE_ID,
           e.target,
-          "MKlmUjfoTErm9vS7g"
+          import.meta.env.VITE_PUBLIC_KEY
         )
         .then((response) => {
           console.log(response);
@@ -72,7 +79,9 @@ const ContactMe = ({ onClose, onOutsideClick }) => {
     }
   };
 
-  const isFormValid = Object.values(formData).every((value) => value.trim() !== "");
+  const isFormValid = Object.values(formData).every(
+    (value) => value.trim() !== ""
+  );
 
   return (
     <Modal visible="true" onClick={onOutsideClick}>
@@ -124,7 +133,11 @@ const ContactMe = ({ onClose, onOutsideClick }) => {
 
           {confirmationMessage && <p>{confirmationMessage}</p>}
 
-          <SendButton type="submit" disabled={!isFormValid} isValid={isFormValid}>
+          <SendButton
+            type="submit"
+            disabled={!isFormValid}
+            isValid={isFormValid}
+          >
             Send
           </SendButton>
         </form>
