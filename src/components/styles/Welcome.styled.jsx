@@ -37,7 +37,12 @@ export const PreNameMobile = styled.pre`
   }
 `;
 
-export const PreImg = styled.pre`
+export const PreImg = styled.img`
+  margin-right: 10px; /* Espacio a la derecha de la imagen */
+  max-width: 100px; /* Ajusta el tamaño máximo de la imagen según tus necesidades */
+  border-radius: 50%; /* Hace que la imagen sea redonda */
+  border: 2px solid white; /* Bordes blancos */
+
   @media (max-width: 550px) {
     display: none;
   }
@@ -62,4 +67,9 @@ export const Link = styled.a`
   &:hover {
     border-bottom-style: solid;
   }
+`;
+
+export const PreImgAndPreName = styled.div`
+  display: flex;
+  align-items: center;
 `;
