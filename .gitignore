@@ -23,3 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Ignorar archivos de imágenes
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
