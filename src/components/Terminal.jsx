@@ -1,6 +1,6 @@
 import { createContext, useCallback, useEffect, useRef, useState } from "react";
 import _ from "lodash";
-import Output from "./Output";
+import Output from "./OutPut";
 import TermInfo from "./TermInfo";
 import {
   CmdNotFound,
